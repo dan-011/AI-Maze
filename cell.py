@@ -82,3 +82,34 @@ class Cell:
 
     def hasWest(self):
         return self.west is not None
+
+    def getCoords(self, nrows, ncols):
+        row = self.cellNum % nrows
+        col = ncols - (self.cellNum // ncols)
+        return (row, col)
+
+    def hasDir(self, direction):
+        match direction:
+            case Directions.NORTH:
+                return self.hasNorth()
+            case Directions.SOUTH:
+                return self.hasSouth()
+            case Directions.EAST:
+                return self.hasEast()
+            case Directions.WEST:
+                return self.hasWest()
+            case _:
+                raise ValueError
+    
+    def atDeadEnd(self, prevDir):
+        match prevDir:
+            case Directions.NORTH:
+                return not(self.hasSouth()) and not(self.hasEast()) and not(self.hasWest())
+            case Directions.SOUTH:
+                return not(self.hasNorth()) and not(self.hasEast()) and not(self.hasWest())
+            case Directions.EAST:
+                return not(self.hasNorth()) and not(self.hasSouth()) and not(self.hasWest())
+            case Directions.WEST:
+                return not(self.hasNorth()) and not(self.hasSouth()) and not(self.hasEast())
+            case _:
+                raise ValueError

@@ -4,7 +4,9 @@ import sys
 from interface import *
 
 maze = mz.Maze()
-maze.buildMaze()
+#maze.buildMaze()
+maze.buildTestMaze()
+
 
 player1 = pl.Player()
 
