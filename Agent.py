@@ -99,7 +99,7 @@ def geneticAlgorithm(maze, numPlayers, numberOfMutations, lengthOfPath):
 def main():
     maze = Maze(10, 10)
     maze.buildMaze()
-    numberOfAgents = 10
+    numberOfAgents = 100
     numberOfMutations = 10
     lengthOfPath = 100
     geneticAlgorithm(maze, numberOfAgents, numberOfMutations, lengthOfPath)
