@@ -1,15 +1,15 @@
-Test Maze 1:
-Start: 0
-Finish: 8
+3x3 Maze:
+Start Cell: 0
+Finish Cell: 8
 0-1-2
+  |  
+3-4-5
 |   |
-3-4 5
-|   |
-6-7-8
+6-7 8
 
-Test Maze 2:
-Start: 0
-Finish: 24
+5x5 Maze:
+Start Cell: 0
+Finish Cell: 24
 0--1--2  3  4
     |  |  |  |
  5--6  7--8--9
@@ -20,9 +20,9 @@ Finish: 24
  |  |  |  |  |
 20 21-22 23-24
 
-10x10 Maze (goal):
-Start: 0
-Finish: 99
+10x10 Maze:
+Start Cell: 0
+Finish Cell: 99
  0  1--2  3  4--5  6--7  8  9
  |  |  |  |  |  |  |     |  |
 10-11 12-13-14 15-16-17-18-19

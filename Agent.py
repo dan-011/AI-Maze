@@ -52,6 +52,19 @@ def selectParents(_players, perfs):
     assert(len(p1.getPath()) == len(p2.getPath()))
     slicePoint = random.randint(0, len(p1.getPath()) - 1)
 
+    # p1Path = ""
+    # p2Path = ""
+    # for i in range(len(p1.getPath())):
+    #     p1Path += str(p1.getPath()[i])
+    #     p2Path += str(p2.getPath()[i])
+
+    # print("Partitioning:")
+    
+    # print("p1:\n" + p1Path[:slicePoint] + " :: " + p1Path[slicePoint:])
+    # print("p2:\n" + p2Path[:slicePoint] + " :: " + p2Path[slicePoint:])
+    # print(p1Path[:slicePoint] + " :: " + p2Path[slicePoint:])
+    # print(p2Path[:slicePoint] + " :: " + p1Path[slicePoint:] + '\n')
+
     childPath1 = p1.getPath()[:slicePoint] + p2.getPath()[slicePoint:]
     childPath2 = p2.getPath()[:slicePoint] + p1.getPath()[slicePoint:]
 
@@ -98,7 +111,8 @@ def geneticAlgorithm(maze, numPlayers, numberOfMutations, lengthOfPath):
 
 def main():
     maze = Maze(10, 10)
-    maze.buildMaze()
+    # maze.buildMaze()
+    maze.buildTestMaze2()
     numberOfAgents = 100
     numberOfMutations = 10
     lengthOfPath = 100
